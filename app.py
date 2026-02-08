@@ -22,7 +22,7 @@ st.sidebar.header("Konfigurasi & Filter")
 uploaded_file = st.sidebar.file_uploader("Upload CSV Anda", type=["csv"])
 
 # Gunakan file yang diupload atau default dataset.csv
-target_file = uploaded_file if uploaded_file is not None else "archive/dataset.csv"
+target_file = uploaded_file if uploaded_file is not None else "dataset.csv"
 
 try:
     df = load_data(target_file)
@@ -108,3 +108,4 @@ try:
 except Exception as e:
     st.error(f"Terjadi kesalahan: {e}")
     st.info("Pastikan file 'dataset.csv' tersedia di direktori yang sama atau upload file melalui sidebar.")
+
